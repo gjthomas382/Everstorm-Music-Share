@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-everstormmusicshare-dev-22019-authRole",
+      "UnauthRoleArn": "arn:aws:iam::392279548560:role/amplify-everstormmusicshare-dev-22019-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::392279548560:role/amplify-everstormmusicshare-dev-22019-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-everstormmusicshare-dev-22019-deployment",
+      "UnauthRoleName": "amplify-everstormmusicshare-dev-22019-unauthRole",
+      "StackName": "amplify-everstormmusicshare-dev-22019",
+      "StackId": "arn:aws:cloudformation:us-east-1:392279548560:stack/amplify-everstormmusicshare-dev-22019/f6d121a0-ab44-11ed-843f-12df07fd23a3",
+      "AmplifyAppId": "d1lnf9jfr679va"
+    },
+    "categories": {
+      "api": {
+        "everstormmusicshare": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
+      }
+    }
+  }
+}

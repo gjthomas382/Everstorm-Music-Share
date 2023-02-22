@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2208-FTB-ET-DVO-PT Capstone</title>
+  
+  <style>
+    /* Fluid layout */
+    .main-content {
+      width: 80%;
+      float: left;
+    }
+
+    .sidebar {
+      width: 20%;
+      float: right;
+    }
+
+    /* Responsive typography */
+    h1 {
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    @media only screen and (max-width: 767px) {
+      h1 {
+        font-size: 24px;
+        line-height: 1.5;
+      }
+    }
+
+    /* Flexible images and videos */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Mobile-friendly navigation */
+    .menu-icon {
+      display: none;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .menu-icon {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 1;
+      }
+
+      .menu li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .menu a {
+        display: block;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+  <header>
+    <nav>
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu">
+        <li><a href="https://everstormmusicshare-20230213023330-hostingbucket-dev.s3.amazonaws.com/about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    document.querySelector('.menu-icon').addEventListener('click', function() {
+      document.querySelector('.menu').classList.toggle('show');
+    });
+  </script>
+  <body text="lightgray">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          $('#subscribe-form').submit(function(event) {
+            event.preventDefault();
+
+            var email = $('#email-input').val();
+
+            $.ajax({
+              url: 'https://r38hcwfb7h.execute-api.us-east-1.amazonaws.com/prod/',
+              type: 'POST',
+              data: JSON.stringify({email: email}),
+              contentType: 'application/json',
+              success: function(data, textStatus, xhr) {
+                console.log('Successfully subscribed');
+                $('#subscribe-form')[0].reset();
+                alert('Successfully subscribed! Status code: ' + xhr.status);
+              },
+              error: function(xhr, textStatus, errorThrown) {
+                console.log('Error:', xhr.status);
+                alert('Successfully subscribed! Status code: ' + xhr.status);
+                $('#subscribe-form')[0].reset();
+              }
+            });
+          });
+        });
+      </script>
+      <style>
+        html,
+        body {
+          font-family: 'Amazon Ember', 'Helvetica', 'sans-serif';
+          margin: 0;
+          background-color: rgb(40,40,40);
+        }
+        a {
+          color: #999999;
+        }
+        h1 {
+          font-weight: 300;
+        }
+        hr {
+          height: 1px;
+          background: black;
+          border: none;
+        }
+        .app {
+          width: 100%;
+        }
+        .app-header {
+          color: Black;
+          text-align: center;
+          background: linear-gradient(30deg, #f90 55%, #ffc300);
+          width: 100%;
+          margin: 0 0 1em 0;
+          box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .app-body {
+          width: 400px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        .app-body button {
+          background-color: #ff9900;
+          font-size: 14px;
+          color: black;
+          text-transform: uppercase;
+          padding: 1em;
+          border: none;
+        }
+        .app-body button:hover {
+          opacity: 0.8;
+        }
+      </style>
+      <div class="app">
+        <div class="app-header">
+          <h1>Everstorm Music Share</h1>
+        </div>
+          
+        <div align="center">
+          <img src="https://everstormmusicshare-20230213023330-hostingbucket-dev.s3.amazonaws.com/Everstorm.jpg" alt="EVERSTORM" width="300" height="300" />
+          <br>
+          <audio controls preload="metadata" style=" width:300px;">
+            <source src="https://everstormmusicshare-20230213023330-hostingbucket-dev.s3.amazonaws.com/allpersonsfictitious+-+Everstorm.mp3" type="audio/mpeg">
+          </audio><br><br><br>
+        </div>
+        <div align="center">
+          <img src="https://everstormmusicshare-20230213023330-hostingbucket-dev.s3.amazonaws.com/1000words.jpg" alt="EVERSTORM" width="300" height="300" />
+          <br>
+          <audio controls preload="metadata" style=" width:300px;">
+            <source src="https://everstormmusicshare-20230213023330-hostingbucket-dev.s3.amazonaws.com/1%2C000%2BWords%2B(Final).mp3" type="audio/mpeg">
+          </audio><br>
+        </div>
+        <br> <br>
+      <h2>-Subscribe for Notifications</h2>
+      <form id="subscribe-form">
+        <label for="email-input">--Email:</label>
+        <input type="email" id="email-input" name="email" required>
+      
+        <button type="submit">  Subscribe  </button>
+      </form>
+    <br><br>
+  </body>
+</html>
